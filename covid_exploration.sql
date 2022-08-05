@@ -18,14 +18,14 @@ Order by 1,2
 -- Show likelihood of death if infected with Covid in your country. 
 Select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From `portfolio-projects-358318.covid.covid_deaths`
-Where location like 'United States'
+--Where location like 'United States'
 Order by 1,2
 
 -- Total Cases vs. Population
 -- Shows what percentage of population in infected with Covid. 
 Select location, date, population, total_cases, (total_cases/population)*100 as PercentagePopulationInfected
 From `portfolio-projects-358318.covid.covid_deaths`
-Where location like 'United States'
+--Where location like 'United States'
 Order by 1,2
 
 -- Countries with Highest Infection Rate compared to Population
