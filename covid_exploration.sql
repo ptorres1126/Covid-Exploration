@@ -36,6 +36,14 @@ From `portfolio-projects-358318.covid.covid_deaths`
 Group by location, population
 Order by PercentPopulationInfected desc
 
+-- Countries with Highest Infection Rate compared to Population by date
+Select location, date, population, MAX(total_cases) as HighestInfectionCount, 
+MAX((total_cases/population))*100 as PercentPopulationInfected
+From `portfolio-projects-358318.covid.covid_deaths`
+--Where location like 'United States'
+Group by location, population, date
+Order by PercentPopulationInfected desc
+
 -- Countries with Highest Death Count per Population
 Select Location, MAX(Total_deaths) as TotalDeathCount
 From `portfolio-projects-358318.covid.covid_deaths`
